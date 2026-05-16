@@ -1,0 +1,9 @@
+.env
+.env.local
+dist/
+coverage/
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+vendor/
