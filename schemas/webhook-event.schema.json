@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gettalko.com/schemas/webhook-event.schema.json",
+  "title": "TalkO Webhook Event",
+  "type": "object",
+  "required": ["event", "data", "timestamp", "tenantId"],
+  "properties": {
+    "event": {
+      "type": "string",
+      "enum": [
+        "conversation:created",
+        "conversation:resolved",
+        "message:received",
+        "ticket:created",
+        "ticket:updated",
+        "visitor:created"
+      ]
+    },
+    "data": {
+      "type": ["object", "array", "string", "number", "boolean", "null"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tenantId": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}
