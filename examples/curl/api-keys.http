@@ -1,0 +1,13 @@
+### List API keys
+GET https://api.gettalko.com/v1/me/api-keys
+Authorization: Bearer {{TALKO_API_KEY}}
+
+### Create API key
+POST https://api.gettalko.com/v1/me/api-keys
+Authorization: Bearer {{TALKO_API_KEY}}
+Content-Type: application/json
+
+{
+  "name": "Customer backend integration",
+  "scopes": ["read", "write"]
+}

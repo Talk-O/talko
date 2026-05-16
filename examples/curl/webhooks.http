@@ -1,0 +1,16 @@
+### List webhook event types
+GET https://api.gettalko.com/v1/me/webhooks/events
+Authorization: Bearer {{TALKO_API_KEY}}
+
+### Create a webhook
+POST https://api.gettalko.com/v1/webhooks
+Authorization: Bearer {{TALKO_API_KEY}}
+Content-Type: application/json
+
+{
+  "url": "{{TALKO_WEBHOOK_URL}}",
+  "events": [
+    "conversation:created",
+    "message:received"
+  ]
+}
